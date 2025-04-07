@@ -40,7 +40,7 @@ app.post('/webhook', async (req, res) => {
         try {
             const response = await axios.post(url, {
                 chat_id: chatId,
-                text: '🎮 Welcome to Sokoban Game! Click the button below to play:',
+                text: '🎮 Welcome to CarEscape Game! Click the button below to play:',
                 reply_markup: {
                     inline_keyboard: [
                         [{
