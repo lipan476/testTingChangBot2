@@ -32,7 +32,10 @@ app.post('/webhook', async (req, res) => {
     const message = req.body.message;
     const chatId = message.chat.id;
 
-    if (message.text === '/start') {
+    //if (message.text === '/start') {
+    if (message.text.startsWith('/start')) {
+        //start tapps_App_Screen，/start tapps_New， /start tapps_recent
+        
         const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
         console.log(`🛠️ 正在向 Telegram 发送消息: ${url}`);
